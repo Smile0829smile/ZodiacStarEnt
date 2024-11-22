@@ -20,7 +20,7 @@ function checkGameState(){
 
     //checking if player has been win or not
     if(numberOfMatch != 5){
-        if(playerGuesses <= 6){
+        if(playerGuesses >= 6){
             playerStatus = "Харамсалтай байна, Та ялагдлаа.<br>";
             playerStatus += "Зөв хариулт нь " + answer + ".";
 
