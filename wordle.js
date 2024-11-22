@@ -74,6 +74,7 @@ function checkMatch(){
     var matchArray = [];
 
     //The global variables that change
+    numberOfMatch = "0";
     playerGuesses++;
     //Making player's answer all uppercase
     playerAnswer = playerAnswer.toUpperCase();
