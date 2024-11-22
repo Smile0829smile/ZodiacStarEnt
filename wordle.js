@@ -73,8 +73,7 @@ function checkMatch(){
     //local variable
     var matchArray = [];
 
-    //The global variables that changes
-    numberOfMatch = 0;
+    //The global variables that change
     playerGuesses++;
     //Making player's answer all uppercase
     playerAnswer = playerAnswer.toUpperCase();
