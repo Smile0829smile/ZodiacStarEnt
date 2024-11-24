@@ -74,7 +74,7 @@ memberNamtar.push("Soloist")
 //Hamtlagiin ymnuud
 var hamtlagNer = ["XtraOnes"];
 
-var hamtlagGishuud = ["Ahri, "Jinna"];
+var hamtlagGishuud = ["Ahri, Jinna"];
 
 var hamtlagUria = ["idk"];
 
