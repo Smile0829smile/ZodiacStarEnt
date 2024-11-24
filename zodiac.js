@@ -19,6 +19,8 @@ members.push("Jiyu")
 members.push("Kimmy")
 //9
 members.push("Jusong")
+//10
+members.push("Rora")
 
 
 //1
@@ -39,6 +41,8 @@ memberAge.push("12")
 memberAge.push("14")
 //9
 memberAge.push("16")
+//10
+memberAge.push("14")
 
 
 
@@ -60,6 +64,8 @@ memberNamtar.push("Soloist")
 memberNamtar.push("Soloist")
 //9
 memberNamtar.push("Soloist")
+//10
+memberNamtar.push("Soloist")
 
 /////////////////////
 
@@ -68,7 +74,7 @@ memberNamtar.push("Soloist")
 //Hamtlagiin ymnuud
 var hamtlagNer = ["XtraOnes"];
 
-var hamtlagGishuud = ["Ahri, Yunji", "Jinna"];
+var hamtlagGishuud = ["Ahri, "Jinna"];
 
 var hamtlagUria = ["idk"];
 
