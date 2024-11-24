@@ -7,6 +7,18 @@ var members = ["Nazuke"]
 members.push("Ahri")
 //3
 members.push("Yunji")
+//4
+members.push("Gena")
+//5
+members.push("Jinna")
+//6
+members.push("Rose")
+//7
+members.push("Jiyu")
+//8
+members.push("Kimmy")
+//9
+members.push("Jusong")
 
 
 //1
@@ -15,14 +27,38 @@ var memberAge = ["16"]
 memberAge.push("12")
 //3
 memberAge.push("13")
+//4
+memberAge.push("16")
+//5
+memberAge.push("11")
+//6
+memberAge.push("15")
+//7
+memberAge.push("12")
+//8
+memberAge.push("14")
+//9
+memberAge.push("16")
 
 
 
 //1
 var memberNamtar = ["Ceo of Zodiac Entertaiment"]
 //2
-memberNamtar.push("Manager")
+memberNamtar.push("XtraOnes (Хамтлаг)")
 //3
+memberNamtar.push("Soloist")
+//4
+memberNamtar.push("Soloist")
+//5 
+memberNamtar.push("XtraOnes (Хамтлаг)")
+//6
+memberNamtar.push("Soloist")
+//7
+memberNamtar.push("Soloist")
+//8
+memberNamtar.push("Soloist")
+//9
 memberNamtar.push("Soloist")
 
 /////////////////////
@@ -30,21 +66,21 @@ memberNamtar.push("Soloist")
 
 /////////////////////
 //Hamtlagiin ymnuud
-var hamtlagNer = [""];
+var hamtlagNer = ["XtraOnes"];
 
-var hamtlagGishuud = [""];
+var hamtlagGishuud = ["Ahri, Yunji", "Jinna"];
 
-var hamtlagUria = [""];
+var hamtlagUria = ["idk"];
 
 //////////////////////
 
 //////////////////////
 //recorduud
-var records = [""];
+var records = ["2x2 rubick cube"];
 
-var recordOwner = [""];
+var recordOwner = ["Nazuke"];
 
-var recordDate = [""];
+var recordDate = ["7.56 (s)"];
 //////////////////////
 //Button
 //Join
@@ -75,7 +111,11 @@ function homePage(){
 }
 
 function gishuun(){
-    var output = "<br>";
+    var output = "<br><select id='idSelect'>";
+    output += "<option></option>"
+    output += "<option value='<'>Насаар жагсаах (багаас их)</option>"
+    output += "<option value='>'>Насаар жагсаах (ихээс бага)</option></select>"
+    output += "<input type='button' value='жагсаах' onClick='sort()'><br><br>"
     output += "<table><tr><th>Нэр</th><th>Нас</th><th>Үүрэг</th></tr>"
 
     for(i=0; i<=members.length-1; i++){
@@ -168,12 +208,25 @@ function playWordle(){
     output += "Харин хэрэв Шар байвал тэр үгэнд орж байгаа ч буруу байрлалд байна гэсэн үг.</p>"
     output += '<input type="text" class="wordleTextbox" id="idPlayerAnswer" placeholder="Үгээ энд оруулана уу"><br><br>'
     output += '<input type="button" class="wordleButton" id="idStartGame" value="Таах" onclick="startGame()">'
-    output += '<div id="idShowMessage"></div>'
+    output += '<div id="idShowMessage"></div><br>'
     output += '<div id="idShowHistory"></div>'
 
     output += "<br><br>"
     
     idDivDisplay.innerHTML = output;
+}
+
+function sort(){
+    if(idSelect.value == ">"){
+        bubblesort1(memberAge)
+
+        gishuun()
+    }
+    else if(idSelect.value == "<"){
+        bubblesort(memberAge)
+
+        gishuun()
+    }
 }
 
 
@@ -191,4 +244,102 @@ function goBackTogloom(){
 
 function urlJoinEnt(){
     window.open("https://docs.google.com/forms/d/1tWi_Mbr_i3qB1DWIl4NXlRJ50V8qkgGqrsx6RsS2xEA/edit")
+}
+
+function bubblesort(inputArray){
+    var arraySize = inputArray.length;
+
+    //if the given array has less than 2 elements, then it's already sorted!
+    if(arraySize<2){
+        return inputArray;
+    }
+
+    //Keep making passes through the array comparing/swapping adjacent elements.
+    //We do this until we are able to make a passs through the array without 
+    //having to make any swaps - since that must mean that the array is sorted.
+
+    //This variable tracks whether the current pass will be the last one 
+    var sortDone;
+
+    do{
+        //Assume that the array is iin sorted order, until we
+        //are proven wrong (i.e. we have to swap elements)
+        sortDone = true;
+
+        for(var i=0; i< arraySize-1; i++)
+        {
+            if(inputArray[i]> inputArray[i+1])
+            {
+                //The array was not in sorted order, so we must
+                //keep making passes through the array
+                sortDone = false;
+
+                //Swap the two out-of-order elements
+                var temp = members[i];
+                members[i]= members[i+1];
+                members[i+1]= temp;
+                
+                var temp = memberAge[i];
+                memberAge[i]= memberAge[i+1];
+                memberAge[i+1]=temp
+
+                var temp = memberNamtar[i];
+                memberNamtar[i]= memberNamtar[i+1];
+                memberNamtar[i+1]=temp
+            }
+        }
+    }while(sortDone==false)
+
+    //At this point, since we broke out of the while loop, it must
+    //mean that array is sorted
+    return inputArray;
+}
+
+function bubblesort1(inputArray){
+    var arraySize = inputArray.length;
+
+    //if the given array has less than 2 elements, then it's already sorted!
+    if(arraySize<2){
+        return inputArray;
+    }
+
+    //Keep making passes through the array comparing/swapping adjacent elements.
+    //We do this until we are able to make a passs through the array without 
+    //having to make any swaps - since that must mean that the array is sorted.
+
+    //This variable tracks whether the current pass will be the last one 
+    var sortDone;
+
+    do{
+        //Assume that the array is iin sorted order, until we
+        //are proven wrong (i.e. we have to swap elements)
+        sortDone = true;
+
+        for(var i=0; i< arraySize-1; i++)
+        {
+            if(inputArray[i]< inputArray[i+1])
+            {
+                //The array was not in sorted order, so we must
+                //keep making passes through the array
+                sortDone = false;
+
+                //Swap the two out-of-order elements
+                var temp = members[i];
+                members[i]= members[i+1];
+                members[i+1]= temp;
+                
+                var temp = memberAge[i];
+                memberAge[i]= memberAge[i+1];
+                memberAge[i+1]=temp
+
+                var temp = memberNamtar[i];
+                memberNamtar[i]= memberNamtar[i+1];
+                memberNamtar[i+1]=temp
+            }
+        }
+    }while(sortDone==false)
+
+    //At this point, since we broke out of the while loop, it must
+    //mean that array is sorted
+    return inputArray;
 }

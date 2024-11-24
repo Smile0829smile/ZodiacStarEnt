@@ -20,11 +20,11 @@ function checkGameState(){
 
     //checking if player has been win or not
     if(numberOfMatch != 5){
-        if(playerGuesses >= 6){
+        if(playerGuesses == 6){
             playerStatus = "Харамсалтай байна, Та ялагдлаа.<br>";
             playerStatus += "Зөв хариулт нь " + answer + ".";
 
-            idShowMessage.innerHTML = output;
+            idShowMessage.innerHTML = playerStatus;
             idStartGame.value = "Таах";
             playerGuesses = 0;
             answersHistory = "";
@@ -52,18 +52,24 @@ function checkGameState(){
 //This function will start the game
 function startGame(){
     playerAnswer = idPlayerAnswer.value;
-    if(playerGuesses == 0){
-        //making answer
-        wordIndex = randomInt(0, wordArray.length-1);
-        answer = wordArray[wordIndex];
-        
-        //console
-        console.log(answer);
+    if(playerAnswer.length == 5){
+        if(playerGuesses == 0){
+            //making answer
+            wordIndex = randomInt(0, wordArray.length-1);
+            answer = wordArray[wordIndex];
+            
+            //console
+            console.log(answer);
 
-        //This will change our start Game button
-        idStartGame.value = "Таах"
+            //This will change our start Game button
+            idStartGame.value = "Таах"
+        }
+    
+        checkMatch(playerAnswer);
     }
-    checkMatch(playerAnswer);
+    else{
+        alert("Үгийн тоо заавал 5 байх ёстой.")
+    }
     idPlayerAnswer.value = "";
 }
 
@@ -73,8 +79,8 @@ function checkMatch(){
     //local variable
     var matchArray = [];
 
-    //The global variables that change
-    numberOfMatch = "0";
+    //The global variables that changes
+    numberOfMatch = 0;
     playerGuesses++;
     //Making player's answer all uppercase
     playerAnswer = playerAnswer.toUpperCase();
