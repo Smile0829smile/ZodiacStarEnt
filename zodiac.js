@@ -19,8 +19,6 @@ members.push("Jiyu")
 members.push("Kimmy")
 //9
 members.push("Jusong")
-//10
-members.push("Rora")
 
 
 //1
@@ -41,8 +39,6 @@ memberAge.push("12")
 memberAge.push("14")
 //9
 memberAge.push("16")
-//10
-memberAge.push("14")
 
 
 
@@ -64,8 +60,6 @@ memberNamtar.push("Soloist")
 memberNamtar.push("Soloist")
 //9
 memberNamtar.push("Soloist")
-//10
-memberNamtar.push("Soloist")
 
 /////////////////////
 
@@ -74,7 +68,7 @@ memberNamtar.push("Soloist")
 //Hamtlagiin ymnuud
 var hamtlagNer = ["XtraOnes"];
 
-var hamtlagGishuud = ["Ahri, Jinna"];
+var hamtlagGishuud = ["Ahri, Yunji", "Jinna"];
 
 var hamtlagUria = ["idk"];
 
@@ -94,15 +88,16 @@ var otherButton = ["<input type='button' id='idButtonJoin' value='Бүртгүү
 
 //Togloom
 otherButton.push("<input type='button' id='idButtonGame' value='Тоглоомнууд' onClick='playGame()'>");
-    var games = ["<input type='button' id='idGame1' value='Mongol Wordle' onClick='playWordle()'>"];
-
+    var games = ["<input type='button' id='idGame0' value='Mongol Wordle' onClick='playWordle()'> "];
+    games.push("<input type='button' id='idGame1' value='Dark/Light side romance' onClick='darkLightRomance()'>");
+console.log(games)
 
 
 
 
 //button to back
 var butsah = "<input type='button' id='idBackBtn' value='Буцах' onClick='goBack()'>"
-var butsahTogloom = "<input type='button' id='idBackBtn' value='Буцах' onClick='goBackTogloom()'>"
+var butsahTogloom = "<input type='button' id='idBackBtn' value='Гарах' onClick='goBackTogloom()'>"
 
 
 //Function uud
@@ -219,6 +214,20 @@ function playWordle(){
 
     output += "<br><br>"
     
+    idDivDisplay.innerHTML = output;
+}
+
+function darkLightRomance(){
+    var output = "<div id='idDivHelper' class='divHelper'>";
+    output += butsahTogloom+"</div><br>"
+
+    output += "<p>Энэ нь зүгээр хөгжилтэй байлгах үүднээс нэмсэн"
+    output += " хөгжилтэй тест. Та өөрийгөө романтик харилцааны сайн тал уу "
+    output += "муу тал уу гэдэг олж мэдэх болно. Чин сэтгэлээсээ хариулаарай.</p>"
+    output += "<br><input type='button' id='idBtn1' value='эхлэх' onClick='setUpGameArea()'>"
+
+    output += "<br><br>"
+
     idDivDisplay.innerHTML = output;
 }
 
