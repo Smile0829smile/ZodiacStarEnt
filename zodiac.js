@@ -4,7 +4,7 @@
 //1
 var members = ["Nazuke"]
 //2
-members.push("Ahri")
+// members.push("Ahri")
 //3
 members.push("Yunji")
 //4
@@ -24,7 +24,7 @@ members.push("Jusong")
 //1
 var memberAge = ["16"]
 //2
-memberAge.push("12")
+// memberAge.push("12")
 //3
 memberAge.push("13")
 //4
@@ -45,11 +45,11 @@ memberAge.push("16")
 //1
 var memberNamtar = ["Ceo of Zodiac Entertaiment"]
 //2
-memberNamtar.push("XtraOnes (Хамтлаг)")
+// memberNamtar.push("XtraOnes (Хамтлаг)")
 //3
 memberNamtar.push("Soloist")
 //4
-memberNamtar.push("Soloist")
+memberNamtar.push("CEO of Zodiac Entertaiment")
 //5 
 memberNamtar.push("XtraOnes (Хамтлаг)")
 //6
@@ -59,7 +59,7 @@ memberNamtar.push("Soloist")
 //8
 memberNamtar.push("Soloist")
 //9
-memberNamtar.push("Soloist")
+memberNamtar.push("Editor")
 
 /////////////////////
 
@@ -67,20 +67,21 @@ memberNamtar.push("Soloist")
 /////////////////////
 //Hamtlagiin ymnuud
 var hamtlagNer = ["XtraOnes"];
+hamtlagNer.push("RAVYNX")
 
-var hamtlagGishuud = ["Ahri, Yunji", "Jinna"];
-
-var hamtlagUria = ["idk"];
+var hamtlagGishuud = ["Jinna"];
+hamtlagGishuud.push("Minji<br> Jusong<br> Rora")
 
 //////////////////////
 
 //////////////////////
 //recorduud
-var records = ["2x2 rubick cube"];
+var records = [""];
 
-var recordOwner = ["Nazuke"];
+var recordOwner = [""];
 
-var recordDate = ["7.56 (s)"];
+var recordDate = [""];
+//7.56 (s)
 //////////////////////
 //Button
 //Join
@@ -130,10 +131,10 @@ function gishuun(){
 
 function hamtlag(){
     var output = "<br>";
-    output+= "<table><tr><th>Хамтлагийн нэр</th><th>Гишүүд</th><th>Уриа</th></tr>"
+    output+= "<table><tr><th>Хамтлагийн нэр</th><th>Гишүүд</th></tr>"
 
     for(i=0; i<=hamtlagNer.length-1; i++){
-        output+= "<tr><td>"+hamtlagNer[i]+"</td><td>"+hamtlagGishuud[i]+"</td><td>"+hamtlagUria[i]+"</td></tr>"
+        output+= "<tr><td>"+hamtlagNer[i]+"</td><td>"+hamtlagGishuud[i]+"</td></tr>"
     }
 
     output+= "</table><br>"
@@ -258,7 +259,8 @@ function goBackTogloom(){
 }
 
 function urlJoinEnt(){
-    window.open("https://docs.google.com/forms/d/1tWi_Mbr_i3qB1DWIl4NXlRJ50V8qkgGqrsx6RsS2xEA/edit")
+    // window.open("https://docs.google.com/forms/d/1tWi_Mbr_i3qB1DWIl4NXlRJ50V8qkgGqrsx6RsS2xEA/edit")
+    window.open("https://www.facebook.com/profile.php?id=100076458789842")
 }
 
 function bubblesort(inputArray){
