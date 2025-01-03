@@ -19,6 +19,14 @@ members.push("Jiyu")
 members.push("Kimmy")
 //9
 members.push("Jusong")
+//10
+members.push("Amy")
+//11
+members.push("Minji")
+//12
+members.push("Rora")
+//13
+members.push("Monix")
 
 
 //1
@@ -39,7 +47,14 @@ memberAge.push("12")
 memberAge.push("14")
 //9
 memberAge.push("16")
-
+//10
+memberAge.push("11")
+//11
+memberAge.push("13")
+//12
+memberAge.push("15")
+//13
+memberAge.push("10")
 
 
 //1
@@ -60,6 +75,14 @@ memberNamtar.push("Soloist")
 memberNamtar.push("Soloist")
 //9
 memberNamtar.push("Editor")
+//10
+memberNamtar.push("Soloist")
+//11
+memberNamtar.push("Soloist")
+//12
+memberNamtar.push("RAVYNX (Хамтлаг)")
+//13
+memberNamtar.push("Soloist")
 
 /////////////////////
 
